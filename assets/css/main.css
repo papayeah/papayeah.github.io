@@ -1,0 +1,141 @@
+/* IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+/* PROJECT GALLERY */
+#gute {
+    background-image: url("../imgs/comm/Gutenberg/poster.png");
+}
+
+#life {
+    background-image: url("../imgs/comm/Life Drawing/poster.png");
+}
+
+#webe {
+    background-image: url("../imgs/comm/Promo/poster.png");
+}
+
+#vime {
+    background-image: url("../imgs/comm/Vimeo/poster.png");
+}
+
+#one {
+    background-image: url("../imgs/comm/One/poster.png");
+}
+
+#timb {
+    background-image: url("../imgs/comm/Timberland/poster.png");
+}
+
+#iber {
+    background-image: url("../imgs/comm/Iberia/poster.png");
+}
+
+#nost {
+    background-image: url("../imgs/comm/Nostos/poster.png");
+}
+
+/* SITE CODE  */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    background: transparent;
+    width: 0;
+}
+
+html {
+    background-color: rgb(10, 10, 10);
+    color: rgb(231, 247, 239);
+    font-family: "Catamaran", sans-serif;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    position: relative;
+}
+
+a {
+    color: inherit;
+    position: relative;
+    text-decoration: none;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+.projectContainer {
+    align-items: center;
+    display: grid;
+    gap: 7.5px;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100vh;
+}
+
+.projectContainer > a {
+    background-position: center;
+    background-size: cover;
+    height: 20vw;
+}
+
+.projectContainer video {
+    grid-column: 1;
+    height: auto;
+    max-width: 100%;
+}
+
+.aboutContainer {
+    display: grid;
+    grid-column: 2;
+    padding: 50px;
+    position: fixed;
+}
+
+.aboutContainer ul {
+    line-height: 20pt;
+}
+
+.pcProject {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    line-height: 19pt;
+    opacity: 0;
+    padding: 25px;
+    transition: opacity 600ms linear;
+    width: 100%;
+}
+
+.pcProject:hover {
+    opacity: 1;
+}
+
+.pcProject > p {
+    font-size: 90%;
+}
+
+/* .aboutContainer section {
+    opacity: 0;
+    transition: opacity 300ms linear;
+}
+
+.about {
+    opacity: 100%;
+} */
+
+/* MEDIA QUERY - <1024px screens will switch to two-column grid. */
+@media (max-width: 1100px) {
+    .aboutContainer section {
+        font-size: 90%;
+    }
+}
