@@ -2,39 +2,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 /* PROJECT GALLERY */
-#gute {
+#p1 {
     background-image: url("../imgs/comm/Gutenberg/poster.png");
 }
 
-#life {
+#p2 {
     background-image: url("../imgs/comm/Life Drawing/poster.png");
 }
 
-#webe {
+#p3 {
     background-image: url("../imgs/comm/Promo/poster.png");
 }
 
-#vime {
+#p4 {
     background-image: url("../imgs/comm/Vimeo/poster.png");
 }
 
-#one {
+#p5 {
     background-image: url("../imgs/comm/One/poster.png");
 }
 
-#timb {
+#p6 {
     background-image: url("../imgs/comm/Timberland/poster.png");
 }
 
-#iber {
+#p7 {
     background-image: url("../imgs/comm/Iberia/poster.png");
 }
 
-#nost {
+#p8 {
     background-image: url("../imgs/comm/Nostos/poster.png");
 }
 
-/* SITE CODE  */
+/* GENERAL USE TAGS */
+.wide {
+    grid-column: 1/3;
+}
+
+.visible {
+    opacity: 1;
+}
+
+/* SITE CSS */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -88,9 +97,14 @@ ul {
 }
 
 .projectContainer video {
-    grid-column: 1;
     height: auto;
     max-width: 100%;
+}
+
+.projectContainer h4 {
+    color: rgb(90, 90, 90);
+    margin: 0 50px 25px 50px;
+    text-align: center;
 }
 
 .aboutContainer {
@@ -124,18 +138,48 @@ ul {
     font-size: 90%;
 }
 
-/* .aboutContainer section {
-    opacity: 0;
-    transition: opacity 300ms linear;
-}
-
-.about {
-    opacity: 100%;
-} */
-
 /* MEDIA QUERY - <1024px screens will switch to two-column grid. */
 @media (max-width: 1100px) {
     .aboutContainer section {
         font-size: 90%;
+    }
+}
+
+@media (max-width: 769px) {
+    .projectContainer h4.wide {
+        font-size: 75%;
+    }
+
+    .aboutContainer {
+        font-size: 70%;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .projectContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .wide {
+        grid-column: 1;
+    }
+}
+
+@media (min-width: 1440px) {
+    .aboutContainer {
+        font-size: 110%;
+        padding: 50px;
+    }
+} 
+
+@media (min-width: 2560px) {
+    .aboutContainer {
+        font-size: 150%;
+        padding: 75px;
     }
 }
