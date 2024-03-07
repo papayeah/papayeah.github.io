@@ -3,7 +3,7 @@
 
 /* PROJECT GALLERY */
 #p1 {
-    background-image: url("../imgs/comm/Gutenberg/poster.png");
+    background-image: url("../imgs/comm/Built for the Bold/B_poster.png");
 }
 
 #p2 {
@@ -15,15 +15,15 @@
 }
 
 #p4 {
-    background-image: url("../imgs/comm/Vimeo/poster.png");
+    background-image: url("../imgs/comm/Vimeo/V_poster.png");
 }
 
 #p5 {
-    background-image: url("../imgs/comm/One/poster.png");
+    background-image: url("../imgs/comm/One/O_poster.png");
 }
 
 #p6 {
-    background-image: url("../imgs/comm/Timberland/poster.png");
+    background-image: url("../imgs/comm/Timberland 50th/T_poster.png");
 }
 
 #p7 {
@@ -31,7 +31,7 @@
 }
 
 #p8 {
-    background-image: url("../imgs/comm/Nostos/poster.png");
+    background-image: url("../imgs/comm/Nostos/N_poster.png");
 }
 
 /* GENERAL USE TAGS */
@@ -39,8 +39,17 @@
     grid-column: 1/3;
 }
 
+.centre {
+
+}
+
 .visible {
     opacity: 1;
+}
+
+.pInfo {
+    opacity: 1;
+    transition: opacity 600ms linear;
 }
 
 /* SITE CSS */
@@ -102,8 +111,9 @@ ul {
 }
 
 .projectContainer h4 {
-    color: rgb(90, 90, 90);
-    margin: 0 50px 25px 50px;
+    color: rgb(100, 100, 100);  
+    font-weight: 500;
+    margin: 15px 0 50px 0;
     text-align: center;
 }
 
@@ -132,10 +142,6 @@ ul {
 
 .pcProject:hover {
     opacity: 1;
-}
-
-.pcProject > p {
-    font-size: 90%;
 }
 
 /* MEDIA QUERY - <1024px screens will switch to two-column grid. */
