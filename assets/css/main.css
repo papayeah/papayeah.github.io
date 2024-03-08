@@ -39,10 +39,6 @@
     grid-column: 1/3;
 }
 
-.centre {
-
-}
-
 .visible {
     opacity: 1;
 }
@@ -126,6 +122,10 @@ ul {
 
 .aboutContainer ul {
     line-height: 20pt;
+}
+
+.aboutContainer section:nth-child(3) {
+    display: none;
 }
 
 .pcProject {
