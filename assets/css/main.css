@@ -145,23 +145,6 @@ ul {
 }
 
 /* MEDIA QUERY - <1024px screens will switch to two-column grid. */
-@media (max-width: 1100px) {
-    .aboutContainer section {
-        font-size: 90%;
-    }
-}
-
-@media (max-width: 769px) {
-    .projectContainer h4.wide {
-        font-size: 75%;
-    }
-
-    .aboutContainer {
-        font-size: 70%;
-        padding: 30px;
-    }
-}
-
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
@@ -171,8 +154,23 @@ ul {
         grid-template-columns: 1fr;
     }
 
+    .projectContainer h4.wide {
+        font-size: 75%;
+    }
+
+    .aboutContainer {
+        font-size: 70%;
+        padding: 30px;
+    }
+
     .wide {
         grid-column: 1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .aboutContainer section {
+        font-size: 80%;
     }
 }
 
