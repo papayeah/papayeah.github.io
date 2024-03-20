@@ -1,4 +1,4 @@
-/* IMPORT */
+/* FONT IMPORTS */
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 /* PROJECT GALLERY */
@@ -19,7 +19,7 @@
 }
 
 #p5 {
-    background-image: url("../imgs/comm/One/O_poster.png");
+    background-image: url("../imgs/comm/One/O_poster copy.jpg");
 }
 
 #p6 {
@@ -34,18 +34,9 @@
     background-image: url("../imgs/comm/Nostos/N_poster.png");
 }
 
-/* GENERAL USE TAGS */
+/* GENERAL USE CLASSES */
 .wide {
     grid-column: 1/3;
-}
-
-.visible {
-    opacity: 1;
-}
-
-.pInfo {
-    opacity: 1;
-    transition: opacity 600ms linear;
 }
 
 /* SITE CSS */
@@ -78,7 +69,7 @@ a {
     text-decoration: none;
 }
 
-img {
+img, video {
     height: auto;
     max-width: 100%;
 }
@@ -87,12 +78,14 @@ ul {
     list-style: none;
 }
 
+footer {
+    align-self: end;
+}
+
 .projectContainer {
-    align-items: center;
     display: grid;
     gap: 7.5px;
-    grid-template-columns: repeat(2, 1fr);
-    height: 100vh;
+    grid-template-columns: 1fr 1fr;
 }
 
 .projectContainer > a {
@@ -101,31 +94,11 @@ ul {
     height: 20vw;
 }
 
-.projectContainer video {
-    height: auto;
-    max-width: 100%;
-}
-
 .projectContainer h4 {
     color: rgb(100, 100, 100);  
     font-weight: 500;
     margin: 15px 0 50px 0;
     text-align: center;
-}
-
-.aboutContainer {
-    display: grid;
-    grid-column: 2;
-    padding: 50px;
-    position: fixed;
-}
-
-.aboutContainer ul {
-    line-height: 20pt;
-}
-
-.aboutContainer section:nth-child(3) {
-    display: none;
 }
 
 .pcProject {
@@ -144,46 +117,41 @@ ul {
     opacity: 1;
 }
 
-/* MEDIA QUERY - <1024px screens will switch to two-column grid. */
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: 1fr;
+.aboutContainer {
+    display: grid;
+    grid-column: 2;
+    height: 100%;
+    padding: 50px;
+    position: fixed;
+}
+
+#m {
+    display: none;
+}
+
+/* MEDIA QUERIES */
+/* <1025px, projects becomes single-column and titles drop. */
+@media (max-width: 1024px) {
+    .wide {
+        grid-column: auto;
     }
 
     .projectContainer {
         grid-template-columns: 1fr;
     }
 
-    .projectContainer h4.wide {
-        font-size: 75%;
+    #m {
+        display: block;
     }
 
-    .aboutContainer {
-        font-size: 70%;
-        padding: 30px;
-    }
-
-    .wide {
-        grid-column: 1;
+    #mTarget {
+        display: none;
     }
 }
 
-@media (max-width: 1024px) {
-    .aboutContainer section {
-        font-size: 80%;
-    }
-}
-
-@media (min-width: 1440px) {
-    .aboutContainer {
-        font-size: 110%;
-        padding: 50px;
-    }
-} 
-
-@media (min-width: 2560px) {
-    .aboutContainer {
-        font-size: 150%;
-        padding: 75px;
+/* <769px, page becomes single-column and reliant on phone interface to move forward/back; no about section. */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
     }
 }
