@@ -1,1 +1,0 @@
-// document.querySelectorAll(".aboutContainer section").classList.toggle("about");
