@@ -1,5 +1,5 @@
 /* FONT IMPORTS */
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
 
 /* PROJECT GALLERY */
 #p1 {
@@ -61,6 +61,7 @@ main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     position: relative;
+    width: 100%;
 }
 
 a {
@@ -91,7 +92,7 @@ footer {
 .projectContainer > a {
     background-position: center;
     background-size: cover;
-    height: 20vw;
+    height: 35vh;
 }
 
 .projectContainer h4 {
@@ -120,32 +121,30 @@ footer {
 .aboutContainer {
     display: grid;
     grid-column: 2;
-    height: 100%;
+    height: 100vh;
+    overflow-y: scroll;
     padding: 50px;
     position: fixed;
 }
 
-#m {
-    display: none;
-}
-
 /* MEDIA QUERIES */
-/* <1025px, projects becomes single-column and titles drop. */
-@media (max-width: 1024px) {
+/* <1024px, projects becomes single-column and titles drop. */
+@media (max-width: 1235px) {
     .wide {
         grid-column: auto;
     }
 
     .projectContainer {
+        gap: 5px;
         grid-template-columns: 1fr;
     }
 
-    #m {
-        display: block;
+    .pcProject {
+        font-size: 88%;
     }
 
-    #mTarget {
-        display: none;
+    .aboutContainer {
+        font-size: 90%;
     }
 }
 
@@ -153,5 +152,19 @@ footer {
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
+    }
+
+    .projectContainer > a {
+        height: 30vw;
+    }
+
+    .projectContainer h4 {
+        font-size: 10pt;
+        font-weight: 400;
+        margin-top: 10px;
+    }
+
+    .pcProject{
+        display: none;
     }
 }
