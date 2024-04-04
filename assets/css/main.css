@@ -159,12 +159,15 @@ footer {
     }
 
     .projectContainer h4 {
-        font-size: 10pt;
-        font-weight: 400;
+        font-size: 12pt;
         margin-top: 10px;
     }
 
     .pcProject{
+        display: none;
+    }
+
+    .aboutContainer {
         display: none;
     }
 }
