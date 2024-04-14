@@ -107,7 +107,7 @@ footer {
     flex-direction: column;
     height: 100%;
     justify-content: flex-end;
-    line-height: 19pt;
+    line-height: 20pt;
     opacity: 0;
     padding: 25px;
     transition: opacity 600ms linear;
