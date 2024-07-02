@@ -85,6 +85,14 @@ ul {
 
 footer {
     align-self: end;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+footer img {
+    margin-bottom: 15px;
+    width: 100%;
 }
 
 .projectContainer {
@@ -148,6 +156,10 @@ footer {
 /* MEDIA QUERIES */
 /* <1235px, projects becomes single-column. */
 @media (max-width: 1235px) {
+    footer {
+        font-size: 80%;
+    }
+
     .wide {
         grid-column: auto;
     }
