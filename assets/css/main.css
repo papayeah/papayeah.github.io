@@ -87,6 +87,8 @@ footer {
     align-self: end;
     display: flex;
     flex-direction: column;
+    font-size: 70%;
+    margin-top: 45px;
     text-align: center;
 }
 
