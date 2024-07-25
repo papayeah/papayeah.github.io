@@ -2,10 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
 
 /* PROJECT GALLERY */
-#p1 {
-    background-image: url("../imgs/comm/Built for the Bold/B_poster.png");
-}
-
 #p2 {
     background-image: url("../imgs/comm/Life Drawing/poster.png");
 }
