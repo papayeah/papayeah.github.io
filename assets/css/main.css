@@ -94,6 +94,7 @@ footer img {
 }
 
 .projectContainer {
+    align-content: center;
     display: grid;
     gap: 7.5px;
     grid-template-columns: 1fr 1fr;
