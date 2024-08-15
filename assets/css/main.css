@@ -2,10 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap');
 
 /* PROJECT GALLERY */
-#p2 {
-    background-image: url("../imgs/comm/Life Drawing/poster.png");
-}
-
 #p3 {
     background-image: url("../imgs/comm/Promo/poster.png");
 }
@@ -24,10 +20,6 @@
 
 #p7 {
     background-image: url("../imgs/comm/Iberia/poster.png");
-}
-
-#p8 {
-    background-image: url("../imgs/comm/Nostos/N_poster.png");
 }
 
 #p9 {
@@ -61,7 +53,6 @@ main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     position: relative;
-    width: 100%;
 }
 
 a {
@@ -80,30 +71,28 @@ ul {
 }
 
 footer {
-    align-self: end;
-    display: flex;
-    flex-direction: column;
-    font-size: 72%;
-    margin-top: 45px;
+    display: grid;
+    margin: -30px 45px 45px 45px;
     text-align: center;
 }
 
 footer img {
     margin-bottom: 15px;
-    width: 100%;
+    padding-left: 60px;
+    width: 72%;
 }
 
 .projectContainer {
-    align-content: center;
     display: grid;
     gap: 7.5px;
     grid-template-columns: 1fr 1fr;
 }
 
 .projectContainer > a {
+    background-color: rgb(231, 247, 239);
     background-position: center;
     background-size: cover;
-    height: 320px;
+    /* height: 22vh; */
 }
 
 .projectContainer h4 {
@@ -131,14 +120,12 @@ footer img {
 
 .aboutContainer {
     display: grid;
-    grid-column-end: 3;
-    grid-column-start: 2;
     height: 100vh;
     max-width: 100%;
     overflow-y: scroll;
     padding: 50px;
     
-    /* SAFARI COLUMN-WIDTH FIX, CREDIT T */
+    /* SAFARI COLUMN-WIDTH FIX, CREDIT Tp */
     position: sticky;
     top: 0;
 }
@@ -153,50 +140,62 @@ footer img {
 }
 
 /* MEDIA QUERIES */
-/* <1235px, projects becomes single-column. */
-@media (max-width: 1800px) {
-    footer {
-        font-size: 80%;
-    }
-
+/* <769px, page becomes single-column and reliant on phone interface to move forward/back; no about section. */
+@media (max-width: 1440px) {
     .wide {
-        grid-column: auto;
+        grid-column: 1;
     }
 
     .projectContainer {
-        gap: 5px;
         grid-template-columns: 1fr;
     }
 
-    .pcProject {
-        font-size: 88%;
+    footer {
+        font-size: 72%;
+        margin: 90px;
+        order: 3;
     }
-
-    .aboutContainer {
-        font-size: 90%;
+    
+    footer img {
+        padding: 0;
     }
 }
 
-/* <769px, page becomes single-column and reliant on phone interface to move forward/back; no about section. */
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
     }
 
-    .projectContainer > a {
-        height: 30vw;
-    }
-
-    .projectContainer h4 {
-        font-size: 10pt;
-        margin-top: 10px;
+    .projectContainer {
+        gap: 4px;
+        order: 1;
     }
 
     .pcProject{
         display: none;
     }
 
+    .projectContainer > a {
+        height: 22vh;
+    }
+
+    .projectContainer h4 {
+        font-size: 10pt;
+        margin: 10px 0 45px 0;
+    }
+
+    .projectContainer h4:last-of-type {
+        margin-bottom: 0;
+    }
+
     .aboutContainer {
-        display: none;
+        height: auto;
+        order: 0;
+        padding: 35px;
+        position: static;
+    }
+
+    footer {
+        margin: 45px;
     }
 }
