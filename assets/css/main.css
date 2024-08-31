@@ -100,7 +100,7 @@ footer img {
 }
 
 .projectContainer h4 {
-    color: rgb(100, 100, 100);  
+    color: rgb(247, 232, 240);  
     font-weight: 500;
     margin: 15px 0 50px 0;
     text-align: center;
@@ -163,9 +163,14 @@ footer img {
     .projectContainer {
         grid-template-columns: 1fr;
     }
+
+    .pcProject {
+        font-size: 85%;
+        line-height: 16pt;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1036px) {
     .dummy {
         display: block;
     }
