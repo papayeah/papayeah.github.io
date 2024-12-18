@@ -86,6 +86,7 @@ footer img {
     display: grid;
     gap: 7.5px;
     grid-template-columns: 1fr 1fr;
+    /* position: relative; */
 }
 
 .projectContainer > a {
@@ -115,6 +116,15 @@ footer img {
 
 .pcProject:hover {
     opacity: 1;
+}
+
+.pcProject h4 {
+    bottom: -25px;
+    font-weight: 100;
+    line-height: 15pt;
+    position: absolute;
+    right: 25px;
+    text-align: right;
 }
 
 .aboutContainer {
@@ -162,6 +172,10 @@ footer img {
     .pcProject {
         font-size: 85%;
         line-height: 16pt;
+    }
+
+    .pcProject h4 {
+        display: none;
     }
 }
 
